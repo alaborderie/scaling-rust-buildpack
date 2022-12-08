@@ -10,6 +10,5 @@ cd "$1"
 cargo build --release
 
 echo "-----> Remove build files to reduce image size"
-cd target/release
-rm -rf build deps examples incremental
-cd "$1"
+mv "target/release/$APP_NAME" .
+rm -rf "$1/target"
