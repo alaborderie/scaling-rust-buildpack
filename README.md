@@ -12,3 +12,5 @@ https://github.com/Scalingo/apt-buildpack
 https://github.com/alaborderie/scalingo-rust-buildpack
 ```
 Note that the order of the buildpacks in the .buildpacks file matters.
+
+## Copy Aptfile from this repo to your app's root
