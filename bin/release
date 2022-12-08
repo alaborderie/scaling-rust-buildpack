@@ -11,5 +11,5 @@ addons:
 config_vars:
   PATH: /app/bin:/app/vendor/nginx/sbin:/app/vendor/php/bin:/app/vendor/php/sbin:/usr/local/bin:/usr/bin:/bin
 default_process_types:
-  web: ./$APP_NAME
+  web: echo "$(pwd)" && echo "$(ls)" && ./$APP_NAME
 EOF
