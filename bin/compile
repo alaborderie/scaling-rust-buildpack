@@ -10,5 +10,5 @@ cd "$1"
 cargo build --release
 
 echo "-----> Remove build files to reduce image size"
-mv "target/release/$APP_NAME" .
+mv "$1/target/release/$APP_NAME" .
 rm -rf "$1/target"
