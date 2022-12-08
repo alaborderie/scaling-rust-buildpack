@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "-----> Install dependencies to compile rust and libpq-dev for postgres"
+apt-get install --yes --no-install-recommends cargo libpq-dev
+
+echo "-----> Reading env variables"
+source ./read_env.sh
+read_env "$3"
+
+echo "-----> Compile the client application"
+cd "$1"
+cargo build --release

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+BUILD_DIR=$1
+
+source ./read_env.sh
+read_env $3
+
+cat << EOF
+---
+addons:
+  - scalingo-postgresql
+config_vars:
+  PATH: /app/bin:/app/vendor/nginx/sbin:/app/vendor/php/bin:/app/vendor/php/sbin:/usr/local/bin:/usr/bin:/bin
+default_process_types:
+  web: ./$BUILD_DIR/target/release/$APP_NAME
+EOF
