@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "-----> Install dependencies to run compiled binary + cargo + libpq-dev for postgres"
+apt-get update
 apt-get install --yes gcc cargo libpq-dev
 
 echo "-----> Reading env variables"
